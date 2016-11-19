@@ -13,45 +13,43 @@
 <div ng-controller="ContactCtrl">
 
 
-        <form class="form-horizontal">
-      <fieldset>
+ <form class="form-horizontal">
+
+    <fieldset>
 
       <!-- Form Name -->
       <h2>TOMBO'S CONTACT LIST</h2>
 
-      <!-- Text input-->
+      <!-- First Name Text input-->
+
       <div class="form-group">
         <label class="col-md-4 control-label" for="firstName">First Name</label>
         <div class="col-md-4">
-        <input id="firstName" name="firstName" type="text" placeholder="Enter First Name..." class="form-control input-md" required="">
-
+        <input id="firstName" name="firstName" type="text" placeholder="Enter First Name..." class="form-control input-md" required="" ng-model="newContact.firstName">
         </div>
       </div>
 
-      <!-- Text input-->
+      <!-- Last Name Text input-->
       <div class="form-group">
         <label class="col-md-4 control-label" for="lastName">Last Name</label>
         <div class="col-md-4">
-        <input id="lastName" name="lastName" type="text" placeholder="Enter Last Name..." class="form-control input-md" required="">
-
+        <input id="lastName" name="lastName" type="text" placeholder="Enter Last Name..." class="form-control input-md" required="" ng-model="newContact.lastName">
         </div>
       </div>
 
-      <!-- Text input-->
+      <!-- Mobile Text input-->
       <div class="form-group">
         <label class="col-md-4 control-label" for="mobile">Mobile Number</label>
         <div class="col-md-4">
-        <input id="mobile" name="mobile" type="text" placeholder="Enter Mobile Number..." class="form-control input-md" required="">
-
+        <input id="mobile" name="mobile" type="text" placeholder="Enter Mobile Number..." class="form-control input-md" required="" ng-model="newContact.mobile">
         </div>
       </div>
 
-      <!-- Text input-->
+      <!-- Email Text input-->
       <div class="form-group">
         <label class="col-md-4 control-label" for="email">Enter Email</label>
         <div class="col-md-4">
-        <input id="email" name="email" type="text" placeholder="Enter Email Address..." class="form-control input-md" required="">
-
+        <input id="email" name="email" type="text" placeholder="Enter Email Address..." class="form-control input-md" required="" ng-model="newContact.email">
         </div>
       </div>
 
@@ -59,19 +57,45 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="addContact"></label>
         <div class="col-md-8">
-          <button id="addContact" name="addContact" class="btn btn-success">Add Contact</button>
-          <button id="editContact" name="editContact" class="btn btn-danger">Edit Contact</button>
+
+  <!--    ***   PREPOPULATES / ADDS CONTACTS TO LIST FROM DB  *** -->
+
+      <button id="addContact" name="addContact" class="btn btn-success" ng-click="addNewItem()">Add Contact</button>
+      <button id="editContact" name="editContact" class="btn btn-danger" ng-click="editItem()">Edit Contact</button>
+
+        <h3> My Contacts: </h3>
+
+           <div class="red" ng-repeat="contact in contacts">
+             <div class="col-xs-9">{{contact.firstName}}</div>
+             <br>
+
+             <div class="col-xs-9">{{contact.lastName}}</div>
+             <br>
+
+             <div class="col-xs-9">{{contact.mobile}}</div>
+             <br>
+
+             <div class="col-xs-9">{{contact.email}}</div>
+             <br>
+              <br>
+
+           </div>
+
         </div>
-      </div>
+
+<!--       ***   PREPOPULATES / ADDS CONTACTS TO LIST FROM DB  *** -->
+       </div>
 
       </fieldset>
       </form>
 
 
-    <div class="red" ng-repeat="contact in contacts">
-      <div class="col-xs-9">{{contact.firstName}}</div>
-      <div class="col-xs-1">{{contact.lastName}}</div>
-    </div>
+
+
+
+
+
+
 
 </div>
 

@@ -19,14 +19,14 @@ app.factory("ItemFactory", function($q, $http, FIREBASE_CONFIG){
     });
   };
 
-var postNewContact = function(newItem){ //this will put the info in to the FB database
+var postNewContact = function(contact){ //this will put the info in to the FB database
   return $q((resolve,reject)=>{
     $http.post(`${FIREBASE_CONFIG.databaseURL}/contacts.json`,
       JSON.stringify({
-        firstName: newItem.firstName,
-        lastName: newItem.lastName,
-        mobile: newItem.mobile,
-        email: newItem.email
+        firstName: contact.firstName,
+        lastName: contact.lastName,
+        mobile: contact.mobile,
+        email: contact.email
       })
       )
       .success(function(postResponse){
