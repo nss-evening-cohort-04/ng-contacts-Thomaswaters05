@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:8080/#/items/list -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <title>NG Todos</title>
+    <link rel="stylesheet" type="text/css" href="./NG Todos_files/font-awesome.min.css">
+    <link href="./NG Todos_files/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./NG Todos_files/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./NG Todos_files/main.css">
+<script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script></head>
+
+
+<body ng-app="TodoApp" class="ng-scope">   <!-- !!THIS IS WHERE YOU PLACE YOUR ANGULAR APP NAME (SEE JS FILE FOR NAME)!! -->
+    <nav class="navbar navbar-default ng-scope" ng-controller="NavCtrl">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://127.0.0.1:8080/#">Todo App</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <!-- ngRepeat: thingy in navItems --><ul class="nav navbar-nav navbar-right ng-scope" ng-repeat="thingy in navItems">  <!-- always put a repeat above the line you want to repeat ..it does  not matter what thingy is (though you should call it navItem in NavItems-->
+                <li><a href="http://127.0.0.1:8080/#/logout" class="ng-binding">Logout</a></li>  <!-- you use thingy (above) and .name (app.js) which is within the object-->
+              </ul><!-- end ngRepeat: thingy in navItems --><ul class="nav navbar-nav navbar-right ng-scope" ng-repeat="thingy in navItems">  <!-- always put a repeat above the line you want to repeat ..it does  not matter what thingy is (though you should call it navItem in NavItems-->
+                <li><a href="http://127.0.0.1:8080/#/items/list" class="ng-binding">All Items</a></li>  <!-- you use thingy (above) and .name (app.js) which is within the object-->
+              </ul><!-- end ngRepeat: thingy in navItems --><ul class="nav navbar-nav navbar-right ng-scope" ng-repeat="thingy in navItems">  <!-- always put a repeat above the line you want to repeat ..it does  not matter what thingy is (though you should call it navItem in NavItems-->
+                <li><a href="http://127.0.0.1:8080/#/items/new" class="ng-binding">New Items</a></li>  <!-- you use thingy (above) and .name (app.js) which is within the object-->
+              </ul><!-- end ngRepeat: thingy in navItems -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+<div class="row">
+    <h1>NG Todo</h1>
+    <!-- ngView: -->
+
+</div>
+
+
+
+
+<!-- **PLACE DELETED CODE HERE*** -->
+
+    <script src="./NG Todos_files/firebase.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/angular.min.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/angular-route.min.js"></script>
+    <script src="./NG Todos_files/app.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/AppConstants.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/AppConfig.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/AuthFactory.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/ItemFactory.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/UserFactory.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/AuthCtrl.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/NavCtrl.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/ItemListCtrl.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/ItemNewCtrl.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/ItemViewCtrl.js"></script>
+    <script type="text/javascript" src="./NG Todos_files/ItemEditCtrl.js"></script>
+
+
+
+
+</body></html>

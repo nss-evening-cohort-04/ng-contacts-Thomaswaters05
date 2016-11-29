@@ -18,7 +18,9 @@
     <fieldset>
 
       <!-- Form Name -->
-      <h2>TOMBO'S CONTACT LIST</h2>
+
+
+<h2>TOMBO'S CONTACT LIST</h2>
 
       <!-- First Name Text input-->
 
@@ -64,8 +66,9 @@
       <button id="editContact" name="editContact" class="btn btn-danger" ng-click="editItem()">Edit Contact</button>
 
         <h3> My Contacts: </h3>
-
+      <div id="style">
            <div class="red" ng-repeat="contact in contacts">
+
              <div class="col-xs-9">{{contact.firstName}}</div>
              <br>
 
@@ -82,7 +85,7 @@
            </div>
 
         </div>
-
+    </div>
 <!--       ***   PREPOPULATES / ADDS CONTACTS TO LIST FROM DB  *** -->
        </div>
 
